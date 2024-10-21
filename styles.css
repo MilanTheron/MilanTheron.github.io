@@ -15,8 +15,9 @@ body {
 
 /* Photo */
 .profile-picture img {
-    width: 150px;
-    height: 150px;
+    width: 100%;
+    max-width: 150px;
+    height: auto;
     border-radius: 50%;
     object-fit: cover;
     margin-bottom: 20px;
@@ -30,7 +31,7 @@ body {
 
 /* Global Container */
 .container {
-    width: 90%;
+    width: 95%;
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
@@ -91,7 +92,7 @@ h2:after {
     border-radius: 2px;
 }
 
-section:hover{
+section:hover {
     transform: translateY(-5px);
 }
 
@@ -298,6 +299,31 @@ form button:hover {
         font-size: 1.1em;
         padding: 12px;
     }
+
+    .logo h1 {
+        font-size: 2em;
+    }
+
+    .logo p {
+        font-size: 1em;
+    }
+
+    nav ul li a {
+        font-size: 1em;
+    }
+
+    h2 {
+        font-size: 2em;
+    }
+
+    #about, #skills, #projects, #contact, #lien {
+        padding: 20px;
+        margin: 20px 0;
+    }
+
+    #experience, #projects {
+        grid-template-columns: 1fr;
+    }
 }
 
 /* Footer */
@@ -333,48 +359,15 @@ nav ul li {
 }
 
 nav ul li a {
-    color: white;
-    font-size: 1.1em;
+    font-size: 1.2em;
+    color: #ecf0f1;
     text-decoration: none;
-    padding: 10px 15px;
-    border-radius: 30px;
-    transition: background 0.3s ease, color 0.3s ease;
+    padding: 5px 10px;
+    border-radius: 3px;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 nav ul li a:hover {
     background-color: #4a90e2;
-    color: white;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-/* Lien Section */
-#lien {
-    background: white;
-    border-radius: 8px;
-    padding: 50px;
-    margin: 50px 0;
-    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
-}
-
-#lien ul {
-    list-style: none;
-    padding: 0;
-}
-
-#lien ul li {
-    margin-bottom: 20px;
-}
-
-#lien ul li a {
-    font-size: 1.2em;
-    color: #4a90e2;
-    text-decoration: none;
-    transition: color 0.3s;
-}
-
-#lien ul li a:hover {
-    color: #9013fe;
+    color: #fff;
 }
