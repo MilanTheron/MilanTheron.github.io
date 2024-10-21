@@ -227,48 +227,41 @@ section:hover{
 
 /* Form styling */
 form {
-    background-color: #ffffff;
-    padding: 40px;
-    border-radius: 15px;
-    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    max-width: 600px;
-    margin: 50px auto;
-}
-
-/* Form Labels */
-form label {
-    font-size: 1.2em;
-    color: #333;
-    margin-bottom: 5px;
-}
-
-/* Form Inputs */
-form input[type="text"],
-form textarea {
-    width: 100%;
-    padding: 15px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    font-size: 1.1em;
-    transition: border-color 0.3s ease;
     background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 600px;
+    margin: 20px auto;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Focus state for inputs */
-form input[type="text"]:focus,
-form textarea:focus {
-    border-color: #4a90e2;
-    background-color: #ffffff;
-    outline: none;
+label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
 }
 
-/* Textarea */
-form textarea {
-    min-height: 150px;
-    resize: vertical;
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 12px;
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #218838;
 }
 
 /* Submit Button */
