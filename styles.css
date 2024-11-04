@@ -48,6 +48,7 @@ header {
     border-bottom: 10px solid #4a90e2;
     border-radius: 30px;
     margin-bottom: 40px;
+    flex-wrap: wrap;
 }
 
 .header-content {
@@ -57,6 +58,7 @@ header {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
+    flex-wrap: wrap;
 }
 
 .logo h1 {
@@ -91,10 +93,6 @@ h2:after {
     border-radius: 2px;
 }
 
-section:hover{
-    transform: translateY(-5px);
-}
-
 /* About Section */
 #about {
     background: white;
@@ -105,6 +103,7 @@ section:hover{
     justify-content: space-between;
     align-items: flex-start;
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+    flex-wrap: wrap;
 }
 
 #about p {
@@ -293,4 +292,67 @@ html {
 
 #lien ul li a:hover {
     color: #9013fe;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .header-content {
+        flex-direction: column;
+    }
+
+    #about {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    #about p, #about ul {
+        margin: 0;
+        width: 100%;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .project-item, #skills ul li {
+        flex: 1 1 100%;
+    }
+
+    #experience, #projects, #skills, #lien {
+        padding: 20px;
+        margin: 20px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    h2 {
+        font-size: 2em;
+    }
+
+    .logo h1 {
+        font-size: 2em;
+    }
+
+    nav ul li a {
+        font-size: 1em;
+    }
+
+    .project-item h3, #experience h3 {
+        font-size: 1.5em;
+    }
+
+    footer p {
+        font-size: 0.9em;
+    }
 }
