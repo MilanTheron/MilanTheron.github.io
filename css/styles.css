@@ -185,9 +185,8 @@ h2:after {
 }
 
 #skills ul li:before {
-    content: '●';
+    content: '●  ';
     color: #4a90e2;
-    position: absolute;
     left: 0;
     top: 0;
     font-size: 1.5em;
