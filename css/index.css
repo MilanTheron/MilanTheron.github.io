@@ -1,0 +1,25 @@
+.language-selection {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.language-selection button {
+    width: 60px;
+    height: 60px;
+    border: none;
+    border-radius: 50%; 
+    background-color: #f4f4f4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    cursor: pointer;
+}
+
+.language-selection button img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
