@@ -277,6 +277,7 @@ footer p {
 .tabcontent {
     display: none;
     animation: fadeEffect 0.5s;
+    font-size: 1em;
 }
 
 @keyframes fadeEffect {
@@ -325,4 +326,9 @@ footer p {
     .competences-card {
         padding: 15px;
     }
+}
+
+.centered {
+    text-align: center;
+    margin: 10px 0;
 }
