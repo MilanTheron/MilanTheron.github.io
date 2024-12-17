@@ -1,58 +1,45 @@
-const projectFolder = "../Projet";
-const imageFolder = "../res";
+document.addEventListener("DOMContentLoaded", function () {
+    const images = [
+        { src: "res/p1.png", link: "Projet/p1.html", alt: "Projet 1" },
+        { src: "res/p2.png", link: "Projet/p2.html", alt: "Projet 2" }
+    ];
 
-async function loadProjects() {
-    try {
-        const projectFiles = ["p1.html", "p2.html"];
-        const carouselContainer = document.getElementById("carousel-container");
+    const carouselContainer = document.getElementById("carousel-container");
 
-        projectFiles.forEach((file) => {
-            const projectName = file.split(".")[0]; 
-            const projectImage = `${imageFolder}/${projectName}.png`;
+    images.forEach(image => {
+        const carouselItem = document.createElement("div");
+        carouselItem.classList.add("carousel-item");
 
-            const carouselItem = document.createElement("div");
-            carouselItem.classList.add("carousel-item");
-            carouselItem.innerHTML = `
-                <a href="${projectFolder}/${file}">
-                    <img src="${projectImage}" alt="${projectName}" style="width: 100%; border-radius: 8px;">
-                </a>
-            `;
-            carouselContainer.appendChild(carouselItem);
-        });
+        const link = document.createElement("a");
+        link.href = image.link;
 
-        const firstItem = document.querySelector(".carousel-item");
-        if (firstItem) firstItem.classList.add("active");
-    } catch (error) {
-        console.error("Erreur lors du chargement des projets :", error);
-    }
-}
+        const img = document.createElement("img");
+        img.src = image.src;
+        img.alt = image.alt;
 
-function setupCarousel() {
-    const carouselItems = document.querySelectorAll(".carousel-item");
+        link.appendChild(img);
+        carouselItem.appendChild(link);
+        carouselContainer.appendChild(carouselItem);
+    });
+
     const prevBtn = document.getElementById("prev-btn");
     const nextBtn = document.getElementById("next-btn");
-
     let currentIndex = 0;
+    const totalItems = images.length;
 
-    function updateCarousel(index) {
-        carouselItems.forEach((item, i) => {
-            item.style.transform = `translateX(${100 * (i - index)}%)`;
-        });
+    function showItem(index) {
+        carouselContainer.style.transform = `translateX(-${index * 100}%)`;
     }
 
-    prevBtn.addEventListener("click", () => {
-        currentIndex = (currentIndex - 1 + carouselItems.length) % carouselItems.length;
-        updateCarousel(currentIndex);
+    prevBtn.addEventListener("click", function () {
+        currentIndex = (currentIndex - 1 + totalItems) % totalItems;
+        showItem(currentIndex);
     });
 
-    nextBtn.addEventListener("click", () => {
-        currentIndex = (currentIndex + 1) % carouselItems.length;
-        updateCarousel(currentIndex);
+    nextBtn.addEventListener("click", function () {
+        currentIndex = (currentIndex + 1) % totalItems;
+        showItem(currentIndex);
     });
 
-    updateCarousel(currentIndex);
-}
-
-document.addEventListener("DOMContentLoaded", () => {
-    loadProjects().then(setupCarousel);
+    showItem(currentIndex);
 });

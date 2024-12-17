@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Milan Theron</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+                <h1>Milan Theron</h1>
+                <p>Aspiring Developer | Game Designer</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#links">Links</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <p>My name is Milan Theron, a student in Computer Science at the University of Lille (2023-). Passionate about game development, I have personal experience with Unity and Unreal Engine.</p>
+            <ul>
+                <li><strong>Email:</strong> milantheron0@gmail.com</li>
+                <li><strong>Location:</strong> Oignies</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education">
+        <div class="container">
+            <h2>Education</h2>
+            <p><strong>Computer Science Bachelor's Degree (BUT)</strong> - University of Lille (2023-2026)</p>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience">
+        <div class="container">
+            <h2>Experience</h2>
+            <div class="experience-item">
+                <h3>Observation Internship</h3>
+                <p>Internship at CDG Lille (2020). Observational experience in a professional setting.</p>
+            </div>
+            <div class="experience-item">
+                <h3>Personal Project</h3>
+                <p>Created basic game mechanics in Unity.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <div class="container">
+            <h2>Skills</h2>
+            <div class="tab">
+                <button class="tablinks" onclick="openTab(event, 'SoftSkills')" id="defaultOpen">Soft Skills</button>
+                <button class="tablinks" onclick="openTab(event, 'HardSkills')">Hard Skills</button>
+            </div>
+
+            <div id="SoftSkills" class="tabcontent">
+                <h3>Soft Skills</h3>
+                <ul>
+                    <li>Effective communication</li>
+                    <li>Teamwork</li>
+                    <li>English C1/C2 (Cambridge B2 Certificate)</li>
+                </ul>
+            </div>
+
+            <div id="HardSkills" class="tabcontent">
+                <h3>Hard Skills</h3>
+                <ul>
+                    <li>Languages: C, C#, HTML, CSS, Java, SQL</li>
+                    <li>Tools: Unity, Unreal Engine, Agile Scrum, Markdown</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function openTab(evt, tabName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(tabName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+        document.getElementById("defaultOpen").click();
+    </script>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <div class="container">
+            <h2>Projets</h2>
+            <div class="carousel">
+                <div class="carousel-items" id="carousel-container">
+                    <div class="carousel-item">
+                        <a href="../Projet/p1Anglais.html">
+                            <img src="../res/p1.png" alt="Projet 1">
+                        </a>
+                    </div>
+                    <div class="carousel-item">
+                        <a href="../Projet/p2.html">
+                            <img src="../res/p2.png" alt="Projet 2">
+                        </a>
+                    </div>
+                </div>
+                <button class="carousel-control prev" id="prev-btn">❮</button>
+                <button class="carousel-control next" id="next-btn">❯</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Links Section -->
+    <section id="links">
+        <div class="container">
+            <h2>Links</h2>
+            <ul>
+                <li><a href="https://www.linkedin.com/in/milan-theron-1b1567329/" target="_blank">My LinkedIn</a></li>
+                <li><a href="https://github.com/MilanTheron" target="_blank">My GitHub</a></li>
+                <li><a href="res/CV.pdf" download>Download my CV</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Milan Theron. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
